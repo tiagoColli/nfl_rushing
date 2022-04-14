@@ -29,18 +29,18 @@ config :phoenix, :json_library, Jason
 # of this file so it overrides the configuration defined above.
 import_config "#{config_env()}.exs"
 
-if Mix.env() == :dev do
-  config :git_hooks,
-    verbose: true,
-    auto_install: false,
-    hooks: [
-      pre_commit: [
-        tasks: [
-          {:cmd, "mix compile --warnings-as-errors"},
-          {:cmd, "mix format --check-formatted"},
-          {:cmd, "mix credo --strict"},
-          {:cmd, "mix test"}
-        ]
-      ]
-    ]
-end
+# if Mix.env() == :dev do
+#   config :git_hooks,
+#     verbose: true,
+#     auto_install: true,
+#     hooks: [
+#       pre_commit: [
+#         tasks: [
+#           {:cmd, "mix compile --warnings-as-errors"},
+#           {:cmd, "mix format --check-formatted"},
+#           {:cmd, "mix credo --strict"},
+#           {:cmd, "mix test"}
+#         ]
+#       ]
+#     ]
+# end
