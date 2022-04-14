@@ -44,6 +44,8 @@ defmodule NflRushing.MixProject do
       {:gettext, "~> 0.18"},
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
+      {:scrivener_ecto, "~> 2.0"},
+      {:csv, "~> 2.4"},
 
       # test/dev deps
       {:dialyxir, "~> 1.1", only: [:dev, :test], runtime: false},
