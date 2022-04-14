@@ -9,5 +9,7 @@ defmodule NflRushingWeb.Router do
 
   scope "/api", NflRushingWeb do
     pipe_through :api
+
+    get "/players/stats", StatsController, :index
   end
 end

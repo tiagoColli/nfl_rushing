@@ -11,7 +11,8 @@ defmodule NflRushing.Players.Stats do
              rushing_attempts
              total_yards
              avg_yards_per_attempt
-             yards_per_game touchdowns
+             yards_per_game
+             touchdowns
              longest_rush
              longest_rush_tuchdown?
              first_downs
@@ -47,4 +48,6 @@ defmodule NflRushing.Players.Stats do
     |> cast(attrs, @fields)
     |> validate_required(@fields)
   end
+
+  def list_fields, do: @fields
 end
